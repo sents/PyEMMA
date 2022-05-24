@@ -102,3 +102,7 @@ def _version_check(current, testing=False):
 
 # start check in background
 _version_check(version).start()
+
+if __name__ == "__main__":
+    from multiprocess import set_start_method
+    set_start_method("spawn")
